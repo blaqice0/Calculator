@@ -1,5 +1,5 @@
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QFrame, QLineEdit, QLabel, QPushButton, QVBoxLayout, QHBoxLayout
+from PySide6.QtWidgets import QFrame, QLineEdit, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QStyleFactory
 
 
 class ErrorLabel(QLabel):
@@ -104,6 +104,8 @@ class CalculatorPad(QFrame):
 class CalculatorUI(QFrame):
     def __init__(self) -> None:
         super(CalculatorUI, self).__init__()
+
+        self.setStyle(QStyleFactory.create('Fusion'))
 
         self.screen_ = CalculatorScreen()
         self.errorLabel = ErrorLabel()
