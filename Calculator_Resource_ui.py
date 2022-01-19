@@ -2,7 +2,9 @@ from PySide2.QtCore import Qt, QSize
 from PySide2.QtWidgets import (
     QFrame,
     QVBoxLayout,
-    QHBoxLayout, QGridLayout, QLineEdit,
+    QHBoxLayout,
+    QGridLayout,
+    QLineEdit,
 )
 
 from Calculator_Resource_ut import (

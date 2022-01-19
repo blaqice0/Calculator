@@ -10,7 +10,8 @@ from PySide2.QtWidgets import (
     QLabel,
     QHBoxLayout,
     QVBoxLayout,
-    QDesktopWidget, QApplication
+    QDesktopWidget,
+    QApplication
 )
 
 
