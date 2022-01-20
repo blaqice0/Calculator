@@ -61,11 +61,11 @@ CalculatorRightButton {
 }
 
 #mod {
-    border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 8px;
 }
 
 #equal {
-    border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 8px;
 }
 
 """
