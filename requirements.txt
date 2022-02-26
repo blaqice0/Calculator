@@ -1,2 +1,2 @@
-PySide2==5.15.2.1
-shiboken2==5.15.2.1
+PySide6==6.2.3
+shiboken6==6.2.3
