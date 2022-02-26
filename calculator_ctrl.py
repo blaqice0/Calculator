@@ -1,7 +1,7 @@
-from PySide2.QtWidgets import QLineEdit, QLabel
+from PySide6.QtWidgets import QLineEdit, QLabel
 
-import Calculator_Resource_lt as crlt
-from Calculator_Resource_ui import CalculatorUI, CalculatorPad
+import calculator_qss as style
+from calculator_ui import CalculatorUI, CalculatorPad
 
 global res
 result = '0'
@@ -9,9 +9,8 @@ result = '0'
 NUMS = ('1', '2', '3', '4', '5', '6', '7', '8', '9', '0')
 
 
-def set_theme(frame: CalculatorUI, mode: str) -> None:
-    if mode == 'light':
-        frame.setStyleSheet(crlt.qss)
+def set_theme(frame: CalculatorUI) -> None:
+    frame.setStyleSheet(style.qss)
 
 
 def handle_calculator_pad_buttons_click(frame: CalculatorUI) -> None:
@@ -66,10 +65,10 @@ def handle_calculator_pad_buttons_click(frame: CalculatorUI) -> None:
         current_text = input_screen.text()
         current_text = current_text[:-1]
 
+        global result
+
         if current_text == '':
             current_text = '0'
-
-            global result
             result = '0'
 
         input_screen.setText(current_text)

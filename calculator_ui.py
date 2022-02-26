@@ -1,5 +1,5 @@
-from PySide2.QtCore import Qt, QSize
-from PySide2.QtWidgets import (
+from PySide6.QtCore import Qt, QSize
+from PySide6.QtWidgets import (
     QFrame,
     QVBoxLayout,
     QHBoxLayout,
@@ -7,7 +7,7 @@ from PySide2.QtWidgets import (
     QLineEdit,
 )
 
-from Calculator_Resource_ut import (
+from calculator_utils import (
     CalculatorButton,
     CalculatorRightButton,
     IconButton,

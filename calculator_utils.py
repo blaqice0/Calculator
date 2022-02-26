@@ -1,16 +1,15 @@
 from datetime import datetime, timedelta
 from glob import glob
 
-from PySide2.QtCore import QSize, QPoint
-from PySide2.QtGui import QColor, Qt, QImage, QPixmap, QIcon, QFont, QFontDatabase
-from PySide2.QtWidgets import (
+from PySide6.QtCore import QSize, QPoint
+from PySide6.QtGui import QColor, Qt, QImage, QPixmap, QIcon, QFont, QFontDatabase, QScreen
+from PySide6.QtWidgets import (
     QGraphicsDropShadowEffect,
     QFrame,
     QPushButton,
     QLabel,
     QHBoxLayout,
     QVBoxLayout,
-    QDesktopWidget,
     QApplication
 )
 
@@ -241,7 +240,7 @@ class Frameless(QFrame):
 
     def center(self):
         qr = self.frameGeometry()
-        cp = QDesktopWidget().availableGeometry().center()
+        cp = QScreen().availableGeometry().center()
         qr.moveCenter(cp)
         self.move(qr.topLeft())
 
